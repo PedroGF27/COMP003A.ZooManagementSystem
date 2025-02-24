@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace COMP003A.ZooManagementSystem
 {
-    internal class ZooUtility
+    public class ZooUtility
     {
+        public static void DisplayAllAnimals(List<Animal> animals)
+        {
+            foreach (var Animal in animals)
+            {
+                Animal.MakeSound();
+                Console.Write($"{Animal.Name} {Animal.Species}");
+            }
+        }
+
         public void DescribeAnimal(string Name)
         {
             Console.WriteLine($"Animal Name: {Name}");
